@@ -1,0 +1,8 @@
+<% if @photo %>
+	<%= @photo.name %><br/>
+	<%= @photo.description %><br/>
+	<%= image_tag @photo.photo.url(:small) %><br/></br>
+	<%= link_to "Edit", edit_photo_path(@photo.id), :class => "btn" %>
+<% else %>
+	<p>Page Not Found</p>
+<% end %>
