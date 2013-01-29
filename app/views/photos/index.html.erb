@@ -1,4 +1,4 @@
-<%= link_to "Add New Photo", new_photo_path %><br/>
+<%= link_to "Add New Photo", new_photo_path, :class => "btn" %><br/>
 <% @photos.each do |photo| %>
 	<%= link_to photo_name(photo), photo_url(photo.id) %>&nbsp;&nbsp;&nbsp;&nbsp;
 <% end %>

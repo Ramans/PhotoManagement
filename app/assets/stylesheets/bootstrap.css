@@ -978,7 +978,7 @@ pre {
   word-wrap: break-word;
   white-space: pre;
   white-space: pre-wrap;
-  background-color: #f5f5f5;
+  
   border: 1px solid #ccc;
   border: 1px solid rgba(0, 0, 0, 0.15);
   -webkit-border-radius: 4px;
@@ -995,7 +995,7 @@ pre code {
   color: inherit;
   white-space: pre;
   white-space: pre-wrap;
-  background-color: transparent;
+  
   border: 0;
 }
 
@@ -6009,7 +6009,7 @@ a.badge:hover {
   font-size: 60px;
   line-height: 1;
   letter-spacing: -1px;
-  color: inherit;
+  
 }
 
 .hero-unit li {
@@ -6019,10 +6019,11 @@ a.badge:hover {
 
 .unit {
   background-color:#eeeeee;
-  margin-top: -30px;
-  margin-left: -30px;
-  margin-right: -30px;
+  margin: -40px;
   padding: 10px;
+  font-size: 15px;
+  word-break: break-all;
+  word-wrap: break-word;
   -webkit-border-radius: 8px;
      -moz-border-radius: 8px;
           border-radius: 8px;
@@ -6031,9 +6032,12 @@ a.badge:hover {
 
 .app-footer {
   background-color:#000;
-  margin-top: -60px;
-  padding: 25px;
+  padding: 15px;
   color: #ffffff;
+  font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+  word-break: break-all;
+  word-wrap: break-word;
+  
 }
 
 .pull-right {
