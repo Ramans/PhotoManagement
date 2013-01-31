@@ -1,4 +1,21 @@
-<%= link_to "Add New Photo", new_photo_path, :class => "btn" %><br/>
-<% @photos.each do |photo| %>
-	<%= link_to photo_name(photo), photo_url(photo.id) %>&nbsp;&nbsp;&nbsp;&nbsp;
-<% end %>
+<div id="myCarousel" class="carousel slide">
+    
+    <div class="carousel-inner">
+    	<div class="active item"><center><%= link_to photo_name(@photos.first, "large"), photo_url(@photos.first.id) %></center></div>
+    	<% @photos.each do |photo| %>
+		  <div class="item"><center><%= link_to photo_name(photo, "large"), photo_url(photo.id) %></center></div>
+		<% end %>
+    </div>
+
+    <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+    <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+
+</div>
+
+<script type="text/javascript">
+$(function() {
+    $('.carousel').carousel({
+        interval: "100"
+    });
+});
+</script>

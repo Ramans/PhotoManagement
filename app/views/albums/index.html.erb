@@ -1,1 +1,4 @@
-<p>Ra,mansmdsbdjsbjhsfjfs</p>
+<p><%= link_to "Add Album", new_album_path %></p>
+<% @albums.each do |album| %>
+	<%= link_to album.name, album_path(album.id) %>
+<% end %>
