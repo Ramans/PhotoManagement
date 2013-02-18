@@ -11,6 +11,7 @@
 		<%= f.label :photo, "Upload Photo" %>
 		<%= f.file_field :photo %>
 	</div>
+    <%= f.hidden_field :album_id, :class => "input-large" %>
 	<%= f.submit "Save", :class => "btn" %>
 	<%= link_to "Cancel", photos_path, :class => "btn" %>
 <% end %>
@@ -31,8 +32,8 @@ $(function() {
             "photo[photo]": "required"
         },
 
-        errorPlacement: function(error, element) { 
-            error.appendTo(element.after("required")); 
+        errorPlacement: function(text_warning, element) { 
+            text_warning.appendTo(element.after("required")); 
         } 
 
     });

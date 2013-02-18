@@ -9,11 +9,12 @@
 	<div id="new_note_view" style="padding-top:10px;display:none;">
         <%= render :partial => "comments/form", :locals => { :photo => @photo } %>
     </div><br/><br/>
-    <div >
+    
+    <div>
         <pre><strong>Comments:</strong>
-        <% @photo.comments.each do |comment| %>
-    	<%= comment.description %>,  Created on : <%= gmail_date_format(comment.created_at) %>
-        <% end %>
+            <% @photo.comments.each do |comment| %>
+    	    <%= comment.description %>,  Created on : <%= gmail_date_format(comment.created_at) %>
+            <% end %>
         </pre>
     </div>
 <% else %>

@@ -18,4 +18,8 @@ class AlbumsController < ApplicationController
 	def show
 		@album = Album.find_by_id(params[:id])
 	end
+
+	def settings
+		UserNotifier.test_mail("ranga.435@gmail.com").deliver
+	end
 end

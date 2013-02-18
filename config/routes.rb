@@ -1,4 +1,6 @@
 PhotoManagement::Application.routes.draw do
+  get "users/new"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -50,9 +52,17 @@ PhotoManagement::Application.routes.draw do
   # just remember to delete public/index.html.
   # root :to => 'welcome#index'
   resources :photos
-  resources :albums
+  resources :albums do
+    get 'settings', :on => :collection
+  end
   resources :comments
-    root :to => 'photos#index'
+  resources :users
+  resources :sessions
+  root :to => 'sessions#new'
+
+  get "log_out" => "sessions#destroy", :as => "log_out"
+  get "sign_up" => "users#new", :as => "sign_up"
+  get "log_in" => "sessions#new", :as => "log_in"
   # See how all your routes lay out with "rake routes"
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.

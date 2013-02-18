@@ -8,6 +8,7 @@ gem 'rails', '3.2.5'
 gem 'mysql2'
 gem 'therubyracer'
 gem 'paperclip'
+gem 'bcrypt-ruby', :require => 'bcrypt'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
