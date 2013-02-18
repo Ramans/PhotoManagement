@@ -8,8 +8,11 @@ gem 'thin'
 group :production do
   gem 'pg'
 end
+group :development, :test do
+  gem 'mysql2'
+end
+#add bundle for deploying
 
-gem 'mysql2'
 gem 'therubyracer'
 gem 'paperclip'
 gem 'bcrypt-ruby', :require => 'bcrypt'
