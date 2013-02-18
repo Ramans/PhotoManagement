@@ -127,6 +127,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   jquery-rails
   mysql2
+  pg
   paperclip
   rails (= 3.2.5)
   sass-rails (~> 3.2.3)
