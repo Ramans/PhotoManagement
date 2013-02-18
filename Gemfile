@@ -4,7 +4,8 @@ gem 'rails', '3.2.5'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-
+gem 'thin'
+gem 'pg'
 gem 'mysql2'
 gem 'therubyracer'
 gem 'paperclip'
