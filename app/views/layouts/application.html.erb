@@ -54,7 +54,11 @@
 
       <div class="logged">
         <div style="text-align:right;padding:5px;">
-          <%= link_to "Sign Up",  sign_up_path, :class => "btn" %>
+            <% if @user.blank? %>
+                <%= link_to "Sign Up",  sign_up_path, :class => "btn" %>
+            <% else %>
+                <%= link_to "Login",  root_url, :class => "btn" %>
+            <% end %>
         </div>
         <%= yield %>
         <% flash.each do |name, msg| %>
