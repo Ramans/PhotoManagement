@@ -6055,7 +6055,6 @@ a.badge:hover {
 
 .logged {
   background-color:lightgreen;
-  
   text-align: center;
   position: absolute;
   height: auto;
@@ -6063,7 +6062,6 @@ a.badge:hover {
   margin: -100px 0 0 -200px;
   top: 30%;
   left: 45%;
-
   -webkit-border-radius: 8px;
      -moz-border-radius: 8px;
           border-radius: 8px;
