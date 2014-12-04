@@ -1,28 +1,25 @@
 <h2>Sign Up</h2>
 
 <%= form_for @user do |f| %>
-  <% if @user.errors.any? %>
+    <% if @user.errors.any? %>
     <div class="error_message">
-      <h2>Form is invalid</h2>
-      <ul>
-        <% for message in @user.errors.full_messages %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
+        <h2>Form is invalid</h2>
+        <ul>
+            <div style="text-align:left;padding-left:140px;">
+                <% for message in @user.errors.full_messages %>
+                  <li><%= message %></li>
+                <% end %>
+            </div>
+        </ul>
     </div>
   <% end %>
-  <p>
-    <%= f.label :email %>
-    <%= f.text_field :email %>
-  </p>
-  <p>
-    <%= f.label :password %>
-    <%= f.password_field :password %>
-  </p>
-  <p>
-    <%= f.label :password_confirmation %>
-    <%= f.password_field :password_confirmation %>
-  </p>
-  <%= f.submit "Log In", :class => "btn" %>
+    <div style="text-align:left;padding-left:140px;">
+        <%= f.label :email %>
+        <%= f.text_field :email %>
+        <%= f.label :password %>
+        <%= f.password_field :password %>
+        <%= f.label :password_confirmation %>
+        <%= f.password_field :password_confirmation %>
+    </div>
+    <%= f.submit "Log In", :class => "btn" %>
 <% end %>
-
