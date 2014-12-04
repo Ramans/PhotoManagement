@@ -6058,7 +6058,7 @@ a.badge:hover {
   
   text-align: center;
   position: absolute;
-  height: 300px;
+  height: auto;
   width: 500px;
   margin: -100px 0 0 -200px;
   top: 30%;
